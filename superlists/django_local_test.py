@@ -10,6 +10,7 @@ class NewVistorTest(unittest.TestCase):
     def test_start_a_list_retrieve_it_later(self):
         self.driver.get("http://localhost:8000")
         time.sleep(3)
-        assert "Django" in self.driver.title
+        self.assertIn("Django", self.driver.title)
+        
 if __name__ == "__main__":
     unittest.main(warnings='ignore')
